@@ -50,7 +50,7 @@ def make_pix2pix_model(name, input_nc, output_nc=3, model_name='pix2pixHD',ckpt_
 
 class FrameProcessor:
     def __init__(self, garment_name_list,ckpt_dir=None):
-        self.smpl_regressor = SMPL_Regressor(use_bev=True)
+        self.smpl_regressor = SMPL_Regressor(use_bev=False)
         self.viton_model = None
         self.ckpt_dir = ckpt_dir
         self.densepose_extractor = DensePoseExtractor()
